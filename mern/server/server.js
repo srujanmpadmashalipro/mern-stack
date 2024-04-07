@@ -6,7 +6,8 @@ const PORT = process.env.PORT || 5050;
 const app = express();
 
 app.use(cors({
-  origin: "https://mern-stack-frontend-ivory.vercel.app/" // Replace with your actual frontend origin
+  origin: "https://mern-stack-frontend-ivory.vercel.app/" ,// Replace with your actual frontend origin
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE"
 }));
 app.use(express.json());
 app.use("/record", records);
